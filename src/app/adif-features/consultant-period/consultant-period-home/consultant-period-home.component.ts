@@ -103,9 +103,13 @@ export class ConsultantPeriodHomeComponent implements OnInit, OnDestroy {
   }
 
   initialStatus() {
-    if (this.consultingPeriodsManagement.valid) {
+
+    if (this.periodoControl.valid && this.codigoControl.valid) {
+
       this.status = 'En curso';
+
     }
+
   }
 
   consultingPeriodsManagementSubmit() {
