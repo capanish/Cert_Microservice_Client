@@ -26,6 +26,7 @@ import { TranslationES } from '../../../shared/translation/translate_es';
 })
 export class ConsultantPeriodHomeComponent implements OnInit, OnDestroy {
   private stompClient = null;
+  connectionStatus = false;
   private unsubscribe = new Subject();
   whileLoading = false;
   periodoControl;
@@ -40,6 +41,7 @@ export class ConsultantPeriodHomeComponent implements OnInit, OnDestroy {
     private consultingPeriodsService: ConsultingPeriodsService,
     private notificationService: NotificationService
   ) {
+    this.connect();
     this.loadBudgetList();
     this.consultingPeriodsManagement = this.formBuilder.group({
       periodo: ['', Validators.required],
@@ -58,7 +60,6 @@ export class ConsultantPeriodHomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.connect();
   }
 
   public hasError = (controlName: string, errorName: string) => {
@@ -80,7 +81,7 @@ export class ConsultantPeriodHomeComponent implements OnInit, OnDestroy {
     const self = this;
     this.stompClient.connect({}, function (frame) {
       console.log('Connected: ' + frame);
-
+      self.connectionStatus = true;
       self.stompClient
       .subscribe('/topic/status', function (data: FrameImpl) {
         self.status = JSON.parse(data.body)['status'];
