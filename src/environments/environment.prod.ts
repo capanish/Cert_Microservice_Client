@@ -4,6 +4,6 @@ export const environment = {
   supportedLanguages: [
     'es-ES'
   ],
-  serverUrl: 'http://cert-service-adifv2.apps.okd.openshifthub.ml',
+  serverUrl: 'http://gateway-adifv2.apps.okd.openshifthub.ml/api/micro3',
   security: 'csrf'
 };
