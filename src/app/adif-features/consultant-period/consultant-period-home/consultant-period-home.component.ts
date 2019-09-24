@@ -95,7 +95,7 @@ export class ConsultantPeriodHomeComponent implements OnInit, OnDestroy {
     this.consultingPeriodsService.cert(obj)
     .pipe(
       catchError(err => {
-        this.notificationService.setNotification(TranslationES.consultant_period.sorryForIncovinience);
+        this.notificationService.setNotification(TranslationES.consultant_period.serviceUnAvailable);
         this.whileLoading = false;
         return throwError(err);
       })
