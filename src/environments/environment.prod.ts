@@ -4,6 +4,6 @@ export const environment = {
   supportedLanguages: [
     'es-ES'
   ],
-  serverUrl: 'http://grpc-server-adifv2.apps.okd.openshifthub.ml/api/m3',
+  serverUrl: 'http://gateway-adifv2.apps.okd.openshifthub.ml/api/m3',
   security: 'csrf'
 };
