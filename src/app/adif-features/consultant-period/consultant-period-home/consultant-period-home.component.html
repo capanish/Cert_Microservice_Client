@@ -43,9 +43,9 @@
 
               <mat-select id="codigo" formControlName="codigo" (selectionChange)="initialStatus()">
 
-                <mat-option *ngFor="let codigo of codigo$ | async" [value]="codigo.key.codigo">
+                <mat-option *ngFor="let codigo of codigo$ | async" [value]="codigo.codigo">
 
-                  {{codigo.key.codigo}}
+                  {{codigo.codigo}}
 
                 </mat-option>
 
