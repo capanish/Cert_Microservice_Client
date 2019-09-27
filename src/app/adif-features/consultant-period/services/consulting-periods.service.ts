@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
 export interface Budget {
-  codigo_sap_expediente: string;
+  codigo: string;
   cod_sociedad: string;
 }
 
