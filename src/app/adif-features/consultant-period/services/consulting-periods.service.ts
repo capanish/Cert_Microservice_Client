@@ -24,7 +24,7 @@ export interface Cert {
   providedIn: 'root'
 })
 export class ConsultingPeriodsService {
-  private readonly certUri = environment.serverUrl + '/adif/cert';
+  private readonly certUri = environment.socketUrl + '/adif/cert';
   private readonly budgetListUri = environment.serverUrl + '/adif/master/list';
   constructor(
     private http: HttpClient
