@@ -5,5 +5,6 @@ export const environment = {
     'es-ES'
   ],
   serverUrl: 'http://gateway-adifv2.apps.okd.openshifthub.ml/api/m3',
+  socketUrl: 'ws://gateway-adifv2.apps.okd.openshifthub.ml/api/m3',
   security: 'csrf'
 };
