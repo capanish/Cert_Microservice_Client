@@ -11,7 +11,7 @@
 
           <mat-form-field appearance="outline">
 
-              <mat-label>Period selection</mat-label>
+              <mat-label>Periodo Certificacion</mat-label>
 
               <input matInput [matDatepicker]="periodo"
 
@@ -39,7 +39,7 @@
 
             <mat-form-field  appearance="outline">
 
-              <mat-label>Expediente selection</mat-label>
+              <mat-label>Codigo Sap Expediente</mat-label>
 
               <mat-select id="codigo" formControlName="codigo" (selectionChange)="initialStatus()">
 
@@ -66,7 +66,7 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-sm-8 mt-4 py-2 status d-flex justify-content-center">
-          <div>Current Status <span *ngIf="status">: {{status}}</span></div>
+          <div>Estado actual <span *ngIf="status">: {{status}}</span></div>
           <div class="whileLoading"><mat-spinner *ngIf="whileLoading" [diameter]="15"></mat-spinner></div>
       </div>
     </div>
