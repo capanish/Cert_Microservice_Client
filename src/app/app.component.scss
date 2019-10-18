@@ -78,3 +78,21 @@ u {
     color: #001D1F;
     font-weight: 500;
 }
+
+@media (max-width: 575.98px) {
+    #home-header{ 
+        .container { 
+            .img-width {
+                height: 70px !important;
+            }
+        }
+    }
+
+    #home-content.container {
+        .content {
+            > div {
+                padding-top: 0;
+            }
+        }
+    }
+ }
