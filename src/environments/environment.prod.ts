@@ -4,6 +4,6 @@ export const environment = {
   supportedLanguages: [
     'es-ES'
   ],
-  serverUrl: 'http://cert-service-adifv2.apps.okd.openshiftorigin.ml',
+  serverUrl: 'http://cert-service-adifv2.apps.okd.openshifthub.ml',
   security: 'csrf'
 };
